@@ -19,6 +19,27 @@ dist/
 nbdist/
 .nb-gradle/
 
+# Carpeta de configuración de NetBeans
+nbproject/
+private/
+
+# Archivos de respaldo y caché
+*~
+*.swp
+
+# Archivos de construcción y ejecución de NetBeans
+build/
+dist/
+
+# Archivos específicos de NetBeans
+/nb-configuration.xml
+/nb-configuration.xml.orig
+
+# Carpetas de respaldo y caché
+nbproject/private/private.properties
+
+# Reglas específicas para tu proyecto (añade más según sea necesario)
+
 # Package Files #
 *.jar
 *.war
