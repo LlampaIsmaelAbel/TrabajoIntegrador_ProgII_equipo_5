@@ -7,7 +7,6 @@ public class Refrigerado {
 	private String codigoOrganismoSupervision;
     private Date fechaEnvasado;
     private double temperaturaMantenimiento;
-    private String granjaOrigen;
     private double costo;
     private double margenGanancia = 0.15;
 

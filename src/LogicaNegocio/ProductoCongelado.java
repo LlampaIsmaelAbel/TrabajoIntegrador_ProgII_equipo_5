@@ -7,7 +7,7 @@ public class ProductoCongelado extends Producto{
 	
 	private LocalDate fechaEnvasado;
     private String codigoSupervision;
-    private String granjaOrigen;
+    
     private double temperaturaRecomendada;
     
 	public ProductoCongelado(int codProducto,String descripcion,Date fechaVencimiento,int numeroLote, double costoTratamiento,
