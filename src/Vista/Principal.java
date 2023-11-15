@@ -76,8 +76,8 @@ public class Principal extends JFrame {
 		
 	}
 	
-	public void setVentanaRefrig(ProductoRefrigerado vent) {
-		this.ventanaRefri=vent;
+	public void setVentanaRefrig(ProductoRefrigerado ven) {
+		this.ventanaRefri=ven;
 	}
 	
 	public void setVentanaMostrarDatos(MostrarEtiqueta vent) {
