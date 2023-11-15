@@ -11,7 +11,7 @@ import com.toedter.calendar.JDateChooser;
 public class Principal extends JFrame {
 
 	private JPanel contentPane;
-	private JDateChooser dateChooser;// este es unn mesaje del cambio
+	private JDateChooser calendario;// este es unn mesaje del cambio
 
 	/**
 	 * Launch the application.
@@ -42,9 +42,9 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		dateChooser = new JDateChooser();
-		dateChooser.setBounds(149, 89, 87, 20);
-		contentPane.add(dateChooser);
+		calendario = new JDateChooser();
+		calendario.setBounds(150, 87, 87, 20);
+		contentPane.add(calendario);
 		
 	}
 }
