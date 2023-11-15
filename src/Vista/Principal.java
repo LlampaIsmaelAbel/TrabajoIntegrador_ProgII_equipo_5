@@ -16,7 +16,11 @@ import java.awt.event.ActionEvent;
 
 public class Principal extends JFrame {
 	
+	//zona de ventanas
 	private ProductoRefrigerado ventanaRefri;
+	private MostrarEtiqueta ventanaMostrarEtiqueta;
+	
+	
 	private JPanel contentPane;
 	private JButton btnNewRefrigerado;
 	private JButton btnMostrarDatos;
@@ -52,6 +56,12 @@ public class Principal extends JFrame {
 		contentPane.add(btnNewRefrigerado);
 		
 		btnMostrarDatos = new JButton("Mostrar Datos");
+		btnMostrarDatos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ventanaMostrarEtiqueta.setVisible(true);
+				setVisible(false);
+			}
+		});
 		btnMostrarDatos.setBounds(550, 96, 182, 41);
 		contentPane.add(btnMostrarDatos);
 		
@@ -70,5 +80,7 @@ public class Principal extends JFrame {
 		this.ventanaRefri=vent;
 	}
 	
-	
+	public void setVentanaMostrarDatos(MostrarEtiqueta vent) {
+		this.ventanaMostrarEtiqueta=vent;
+	}
 }
