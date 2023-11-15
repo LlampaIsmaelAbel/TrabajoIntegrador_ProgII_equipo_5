@@ -5,19 +5,14 @@ import java.util.List;
 
 public class Lote {
     private int nroLote;
-    private String nombreResponsable;
-    private String dniResponsable;
-    private int nroLegajoResponsable;
+    private Persona responsable;
     private String codigoUbicacion;
     private String fechaCreacion;
 
     private List<Producto> productos;
 
-    public Lote(int nroLote, String nombreResponsable, String dniResponsable, int nroLegajoResponsable, String codigoUbicacion, String fechaCreacion) {
+    public Lote(int nroLote, String codigoUbicacion, String fechaCreacion) {
         this.nroLote = nroLote;
-        this.nombreResponsable = nombreResponsable;
-        this.dniResponsable = dniResponsable;
-        this.nroLegajoResponsable = nroLegajoResponsable;
         this.codigoUbicacion = codigoUbicacion;
         this.fechaCreacion = fechaCreacion;
 

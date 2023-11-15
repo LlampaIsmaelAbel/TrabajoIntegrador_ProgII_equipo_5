@@ -6,7 +6,7 @@ public class Producto {
 	private int codProducto;
 	private String descripcion;
 	private Date fechaVencimiento;
-    private int numLote;
+    private int numLote;// este no va en la clase
     private double costoTratamiento;
 
    
