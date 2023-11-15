@@ -6,10 +6,10 @@ import java.util.Date;
 public class ProductoCongeladoAgua extends ProductoCongelado {
 	private double salinidadAgua;
 	
-	public ProductoCongeladoAgua(int codProducto, String descripcion, Date fechaVencimiento, double costoTratamiento,
+	public ProductoCongeladoAgua(String descripcion, Date fechaVencimiento, double costoTratamiento,
 			String granjaOrigen, Date fechaEnvasado, String codigoSupervision, double temperaturaRecomendada,
 			double porcentajeGanancia, double salinidadAgua) {
-		super(codProducto, descripcion, fechaVencimiento, costoTratamiento, granjaOrigen, fechaEnvasado,
+		super(descripcion, fechaVencimiento, costoTratamiento, granjaOrigen, fechaEnvasado,
 				codigoSupervision, temperaturaRecomendada, porcentajeGanancia);
 		this.salinidadAgua = salinidadAgua;
 	}
