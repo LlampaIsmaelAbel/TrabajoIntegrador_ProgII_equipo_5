@@ -2,7 +2,7 @@ package LogicaNegocio;
 
 import java.util.Date;
 
-public class Refrigerado {
+public class Refrigerado extends Producto{
 	
 	private String codigoOrganismoSupervision;
     private Date fechaEnvasado;
@@ -10,15 +10,21 @@ public class Refrigerado {
     private double costo;
     private double margenGanancia = 0.15;
 
-    public Refrigerado(String codigoOrganismoSupervision, Date fechaEnvasado, double temperaturaMantenimiento, String granjaOrigen, double costo) {
-        this.codigoOrganismoSupervision = codigoOrganismoSupervision;
-        this.fechaEnvasado = fechaEnvasado;
-        this.temperaturaMantenimiento = temperaturaMantenimiento;
-        this.granjaOrigen = granjaOrigen;
-        this.costo = costo;
-    }
+    
+    public Refrigerado(String descripcion, Date fechaVencimiento, double costoTratamiento, String granjaOrigen,
+			String codigoOrganismoSupervision, Date fechaEnvasado, double temperaturaMantenimiento, double costo,
+			double margenGanancia) {
+		super(descripcion, fechaVencimiento, costoTratamiento, granjaOrigen);
+		this.codigoOrganismoSupervision = codigoOrganismoSupervision;
+		this.fechaEnvasado = fechaEnvasado;
+		this.temperaturaMantenimiento = temperaturaMantenimiento;
+		this.costo = costo;
+		this.margenGanancia = margenGanancia;
+	}
 
-    public double calcularPrecioVenta() {
+
+
+	public double calcularPrecioVenta() {
         double precioVenta = costo + (costo * margenGanancia);
         return precioVenta;
     }
@@ -48,13 +54,6 @@ public class Refrigerado {
         this.temperaturaMantenimiento = temperaturaMantenimiento;
     }
 
-    public String getGranjaOrigen() {
-        return granjaOrigen;
-    }
-
-    public void setGranjaOrigen(String granjaOrigen) {
-        this.granjaOrigen = granjaOrigen;
-    }
 
     public double getCosto() {
         return costo;
@@ -75,8 +74,7 @@ public class Refrigerado {
 	@Override
 	public String toString() {
 		return "Refrigerado [codigoOrganismoSupervision=" + codigoOrganismoSupervision + ", fechaEnvasado="
-				+ fechaEnvasado + ", temperaturaMantenimiento=" + temperaturaMantenimiento + ", granjaOrigen="
-				+ granjaOrigen + ", costo=" + costo + ", margenGanancia=" + margenGanancia + "]";
+				+ fechaEnvasado + ", temperaturaMantenimiento=" + temperaturaMantenimiento + ", costo=" + costo + ", margenGanancia=" + margenGanancia + "]";
 	}
     
     
