@@ -7,25 +7,22 @@ public class Refrigerado extends Producto{
 	private String codigoOrganismoSupervision;
     private Date fechaEnvasado;
     private double temperaturaMantenimiento;
-    private double costo;
     private double margenGanancia = 0.15;
 
     
     public Refrigerado(String descripcion, Date fechaVencimiento, double costoTratamiento, String granjaOrigen,
-			String codigoOrganismoSupervision, Date fechaEnvasado, double temperaturaMantenimiento, double costo,
+			String codigoOrganismoSupervision, Date fechaEnvasado, double temperaturaMantenimiento,
 			double margenGanancia) {
 		super(descripcion, fechaVencimiento, costoTratamiento, granjaOrigen);
 		this.codigoOrganismoSupervision = codigoOrganismoSupervision;
 		this.fechaEnvasado = fechaEnvasado;
 		this.temperaturaMantenimiento = temperaturaMantenimiento;
-		this.costo = costo;
 		this.margenGanancia = margenGanancia;
 	}
 
 
-
 	public double calcularPrecioVenta() {
-        double precioVenta = costo + (costo * margenGanancia);
+        double precioVenta = super.getCostoTratamiento() + (super.getCostoTratamiento() * margenGanancia);
         return precioVenta;
     }
 
@@ -54,15 +51,6 @@ public class Refrigerado extends Producto{
         this.temperaturaMantenimiento = temperaturaMantenimiento;
     }
 
-
-    public double getCosto() {
-        return costo;
-    }
-
-    public void setCosto(double costo) {
-        this.costo = costo;
-    }
-
     public double getMargenGanancia() {
         return margenGanancia;
     }
@@ -74,7 +62,7 @@ public class Refrigerado extends Producto{
 	@Override
 	public String toString() {
 		return "Refrigerado [codigoOrganismoSupervision=" + codigoOrganismoSupervision + ", fechaEnvasado="
-				+ fechaEnvasado + ", temperaturaMantenimiento=" + temperaturaMantenimiento + ", costo=" + costo + ", margenGanancia=" + margenGanancia + "]";
+				+ fechaEnvasado + ", temperaturaMantenimiento=" + temperaturaMantenimiento +  ", margenGanancia=" + margenGanancia + "]";
 	}
     
     
