@@ -11,7 +11,7 @@ import com.toedter.calendar.JDateChooser;
 public class Principal extends JFrame {
 
 	private JPanel contentPane;
-	private JDateChooser dateChooser;
+	private JDateChooser dateChooser;// este es unn mesaje del cambio
 
 	/**
 	 * Launch the application.
