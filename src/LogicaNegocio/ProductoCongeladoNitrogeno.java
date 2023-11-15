@@ -7,11 +7,12 @@ public class ProductoCongeladoNitrogeno extends ProductoCongelado {
 	private String metodoCongelacion;
 	private int tiempoExposicionNitrogeno;
 	
-	public ProductoCongeladoNitrogeno(Date fechaVencimiento, String numeroLote, double costoTratamiento,
-			LocalDate fechaEnvasado, String codigoSupervision, String granjaOrigen, double temperaturaRecomendada,
-			String metodoCongelacion, int tiempoExposicionNitrogeno) {
-		super(fechaVencimiento, numeroLote, costoTratamiento, fechaEnvasado, codigoSupervision, granjaOrigen,
-				temperaturaRecomendada);
+	public ProductoCongeladoNitrogeno(int codProducto, String descripcion, Date fechaVencimiento,
+			double costoTratamiento, String granjaOrigen, Date fechaEnvasado, String codigoSupervision,
+			double temperaturaRecomendada, double porcentajeGanancia, String metodoCongelacion,
+			int tiempoExposicionNitrogeno) {
+		super(codProducto, descripcion, fechaVencimiento, costoTratamiento, granjaOrigen, fechaEnvasado,
+				codigoSupervision, temperaturaRecomendada, porcentajeGanancia);
 		this.metodoCongelacion = metodoCongelacion;
 		this.tiempoExposicionNitrogeno = tiempoExposicionNitrogeno;
 	}
