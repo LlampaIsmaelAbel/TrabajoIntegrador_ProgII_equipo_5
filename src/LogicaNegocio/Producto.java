@@ -12,11 +12,6 @@ public class Producto {
     
     
     
-	public Producto() {
-		super();
-		this.codProducto = siguienteCodProd;
-		this.siguienteCodProd++;
-	}
 
 	public Producto(String descripcion, Date fechaVencimiento, double costoTratamiento,
 			String granjaOrigen) {
