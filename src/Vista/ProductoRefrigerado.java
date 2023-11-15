@@ -16,6 +16,7 @@ public class ProductoRefrigerado extends JFrame {
 	
 	private JPanel contentPane;
 	private JButton btnCancelar;
+	private JButton btnGuardar;
 
 	
 	public ProductoRefrigerado() {
@@ -40,8 +41,12 @@ public class ProductoRefrigerado extends JFrame {
 				
 			}
 		});
-		btnCancelar.setBounds(394, 273, 89, 23);
+		btnCancelar.setBounds(388, 271, 89, 23);
 		contentPane.add(btnCancelar);
+		
+		btnGuardar = new JButton("Guardar");
+		btnGuardar.setBounds(56, 271, 89, 23);
+		contentPane.add(btnGuardar);
 	}
 	
 	public void setVentanaPrincipal(Principal vent) {
