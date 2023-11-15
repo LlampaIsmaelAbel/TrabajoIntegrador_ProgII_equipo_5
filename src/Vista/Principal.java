@@ -11,13 +11,16 @@ import com.toedter.calendar.JDateChooser;
 public class Principal extends JFrame {
 
 	private JPanel contentPane;
+	private JDateChooser dateChooser;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
+				
 				try {
 					Principal frame = new Principal();
 					frame.setVisible(true);
@@ -39,8 +42,9 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JDateChooser dateChooser = new JDateChooser();
+		dateChooser = new JDateChooser();
 		dateChooser.setBounds(149, 89, 87, 20);
 		contentPane.add(dateChooser);
+		
 	}
 }
