@@ -1,6 +1,7 @@
 package LogicaNegocio;
 
-import Vista.Principal;;
+import Vista.Principal;
+import Vista.ProductoRefrigerado;;
 
 public class Main {
 
@@ -8,6 +9,10 @@ public class Main {
 		
 		Principal ventana1= new Principal();
 		ventana1.setVisible(true);
+		ProductoRefrigerado ventanaRefrigerado=new ProductoRefrigerado();
+		
+		ventana1.setVentanaRefrig(ventanaRefrigerado);
+		ventanaRefrigerado.setVentanaPrincipal(ventana1);
 
 	}
 

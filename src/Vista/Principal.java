@@ -10,12 +10,19 @@ import com.toedter.calendar.JDateChooser;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Window;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Principal extends JFrame {
-
+	
+	private ProductoRefrigerado ventanaRefri;
 	private JPanel contentPane;
+	private JButton btnNewRefrigerado;
+	private JButton btnMostrarDatos;
+	private JButton btnNewCongelado;
+	private JButton btnNewButton_3;
+	
 
 	
 	
@@ -34,22 +41,34 @@ public class Principal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewRefrigerado = new JButton("New button");
-		btnNewRefrigerado.setBounds(134, 88, 124, 41);
+		btnNewRefrigerado = new JButton("Agregar Producto Refrigerado");
+		btnNewRefrigerado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {// estamos creando un evento para el boton
+				ventanaRefri.setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnNewRefrigerado.setBounds(134, 88, 182, 41);
 		contentPane.add(btnNewRefrigerado);
 		
-		JButton btnMostrarDatos = new JButton("New button");
-		btnMostrarDatos.setBounds(550, 96, 124, 41);
+		btnMostrarDatos = new JButton("Mostrar Datos");
+		btnMostrarDatos.setBounds(550, 96, 182, 41);
 		contentPane.add(btnMostrarDatos);
 		
-		JButton btnNewCongelado = new JButton("New button");
-		btnNewCongelado.setBounds(134, 274, 124, 41);
+		btnNewCongelado = new JButton("Agregar Producto Congelado");
+		btnNewCongelado.setBounds(134, 274, 182, 41);
 		contentPane.add(btnNewCongelado);
 		
-		JButton btnNewButton_3 = new JButton("New button");
-		btnNewButton_3.setBounds(550, 274, 124, 41);
+		btnNewButton_3 = new JButton("New button");
+		btnNewButton_3.setBounds(550, 274, 182, 41);
 		contentPane.add(btnNewButton_3);
 		
 		
 	}
+	
+	public void setVentanaRefrig(ProductoRefrigerado vent) {
+		this.ventanaRefri=vent;
+	}
+	
+	
 }
