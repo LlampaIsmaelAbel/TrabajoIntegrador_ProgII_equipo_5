@@ -55,7 +55,7 @@ public class Principal extends JFrame {
 		btnNewRefrigerado.setBounds(134, 88, 219, 41);
 		contentPane.add(btnNewRefrigerado);
 		
-		btnMostrarDatos = new JButton("Mostrar Datos");
+		btnMostrarDatos = new JButton("Mostrar Etiqueta Producto");
 		btnMostrarDatos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ventanaMostrarEtiqueta.setVisible(true);
