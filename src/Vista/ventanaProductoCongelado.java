@@ -19,7 +19,7 @@ import javax.swing.JSpinner;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class VentanaProductoCongelado extends JFrame {
+public class ProductoCongelado extends JFrame {
 	
 	private ButtonGroup grupRadioBut;
 	private Principal ventPrincipal;
@@ -60,7 +60,7 @@ public class VentanaProductoCongelado extends JFrame {
 	private JSpinner spnTiempo;
 
 
-	public VentanaProductoCongelado() {
+	public ProductoCongelado() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 797, 476);
 		iniciarComponentes();
