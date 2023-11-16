@@ -44,5 +44,13 @@ public class Stock implements Serializable{
         return costoTotal;
     }
 	
-	
+	public double calcularCostoTotalStock () {
+		double costoTotalStock = 0.0;
+		
+		for (Lote lote : nuevoLote) {
+			 costoTotalStock += calcularCostoTotalLote(lote);
+        }
+
+        return costoTotalStock;
+    }
 }
