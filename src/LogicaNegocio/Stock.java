@@ -28,7 +28,6 @@ public class Stock implements Serializable{
 	}
 	
 	
-	
 	public double calcularCostoTotalLote(Lote lote) {
         double costoTotal = 0.0;
 
@@ -44,5 +43,6 @@ public class Stock implements Serializable{
 
         return costoTotal;
     }
+	
 	
 }
