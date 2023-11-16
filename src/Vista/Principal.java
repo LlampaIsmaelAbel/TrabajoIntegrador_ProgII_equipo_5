@@ -19,6 +19,7 @@ public class Principal extends JFrame {
 	//zona de ventanas
 	private ProductoRefrigerado ventanaRefri;
 	private MostrarEtiqueta ventanaMostrarEtiqueta;
+	private ProductoCongelado ventanaCongelad;
 	
 	
 	private JPanel contentPane;
@@ -26,6 +27,7 @@ public class Principal extends JFrame {
 	private JButton btnMostrarDatos;
 	private JButton btnNewCongelado;
 	private JButton btnNewButton_3;
+	
 	
 
 	
@@ -66,6 +68,12 @@ public class Principal extends JFrame {
 		contentPane.add(btnMostrarDatos);
 		
 		btnNewCongelado = new JButton("Agregar Producto Congelado");
+		btnNewCongelado.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ventanaCongelad.setVisible(true);
+				setVisible(false);
+			}
+		});
 		btnNewCongelado.setBounds(134, 274, 219, 41);
 		contentPane.add(btnNewCongelado);
 		
@@ -76,11 +84,15 @@ public class Principal extends JFrame {
 		
 	}
 	
-	public void setVentanaRefrig(ProductoRefrigerado ven) {
-		this.ventanaRefri=ven;
+	public void setVentanaRefrig(ProductoRefrigerado venR) {
+		this.ventanaRefri=venR;
 	}
 	
-	public void setVentanaMostrarDatos(MostrarEtiqueta vent) {
-		this.ventanaMostrarEtiqueta=vent;
+	public void setVentanaMostrarDatos(MostrarEtiqueta ventE) {
+		this.ventanaMostrarEtiqueta=ventE;
+	}
+	
+	public void setVentanaCongelado(ProductoCongelado ventC) {
+		this.ventanaCongelad=ventC;
 	}
 }
