@@ -108,5 +108,27 @@ public class Lote {
 		}
 		return cantidadLote;
 	}
-    
+	//metodo de eliminar Producto Determinado
+	public void eliminar(int codigo) {
+		productos = new ArrayList<Producto>();
+		for (Producto producto : productos) {
+			if (producto.getCodProducto()==codigo) {
+				productos.remove(producto);
+			}
+		}
+	}
+	//Metodo Verificar y eliminar productos vencidos en un lote.
+	public void eliminarProductosVencidos() {
+		Date fechaActual = new Date();
+	}
+	public void verificarYEliminarProductosVencidos() {
+		productos = new ArrayList<Producto>();
+        Date fechaActual = new Date();
+        for (Producto producto : productos) {
+        	if (producto.getFechaVencimiento().before(fechaActual)) {
+                productos.remove(producto);
+            }
+		}
+    }
+	
 }
