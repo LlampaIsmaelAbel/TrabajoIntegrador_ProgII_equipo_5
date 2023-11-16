@@ -15,7 +15,7 @@ import com.toedter.calendar.JDateChooser;
 import javax.swing.JLabel;
 import java.awt.Font;
 
-public class ProductoRefrigerado extends JFrame {
+public class VentanaProductoRefrigerado extends JFrame {
 	
 	private Principal ventPrincipal;
 	
@@ -39,7 +39,7 @@ public class ProductoRefrigerado extends JFrame {
 	
 
 	
-	public ProductoRefrigerado() {
+	public VentanaProductoRefrigerado() {
 		setTitle("Refrigerado");
 //		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 656, 468);

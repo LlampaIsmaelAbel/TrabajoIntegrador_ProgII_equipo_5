@@ -17,9 +17,9 @@ import java.awt.event.ActionEvent;
 public class Principal extends JFrame {
 	
 	//zona de ventanas
-	private ProductoRefrigerado ventanaRefri;
+	private VentanaProductoRefrigerado ventanaRefri;
 	private MostrarEtiqueta ventanaMostrarEtiqueta;
-	private ProductoCongelado ventanaCongelad;
+	private VentanaProductoCongelado ventanaCongelad;
 	
 	
 	private JPanel contentPane;
@@ -84,7 +84,7 @@ public class Principal extends JFrame {
 		
 	}
 	
-	public void setVentanaRefrig(ProductoRefrigerado venR) {
+	public void setVentanaRefrig(VentanaProductoRefrigerado venR) {
 		this.ventanaRefri=venR;
 	}
 	
@@ -92,7 +92,7 @@ public class Principal extends JFrame {
 		this.ventanaMostrarEtiqueta=ventE;
 	}
 	
-	public void setVentanaCongelado(ProductoCongelado ventC) {
+	public void setVentanaCongelado(VentanaProductoCongelado ventC) {
 		this.ventanaCongelad=ventC;
 	}
 }

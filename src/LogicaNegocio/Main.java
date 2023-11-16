@@ -2,8 +2,8 @@ package LogicaNegocio;
 
 import Vista.MostrarEtiqueta;
 import Vista.Principal;
-import Vista.ProductoCongelado;
-import Vista.ProductoRefrigerado;;
+import Vista.VentanaProductoCongelado;
+import Vista.VentanaProductoRefrigerado;;
 
 public class Main {
 
@@ -12,9 +12,9 @@ public class Main {
 		Principal ventanaPrincipal= new Principal();
 		ventanaPrincipal.setVisible(true);
 		
-		ProductoRefrigerado ventanaRefrigerado=new ProductoRefrigerado();
+		VentanaProductoRefrigerado ventanaRefrigerado=new VentanaProductoRefrigerado();
 		MostrarEtiqueta ventanaEtiqueta=new MostrarEtiqueta();
-		ProductoCongelado ventanaCongelado=new ProductoCongelado();
+		VentanaProductoCongelado ventanaCongelado=new VentanaProductoCongelado();
 		
 		ventanaPrincipal.setVentanaRefrig(ventanaRefrigerado);
 		ventanaRefrigerado.setVentanaPrincipal(ventanaPrincipal);
