@@ -19,7 +19,7 @@ import javax.swing.JSpinner;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ProductoCongelado extends JFrame {
+public class VentanaProductoCongelado extends JFrame {
 	
 	private ButtonGroup grupRadioBut;
 	private Principal ventPrincipal;
