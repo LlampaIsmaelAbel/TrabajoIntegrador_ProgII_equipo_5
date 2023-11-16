@@ -2,6 +2,7 @@ package LogicaNegocio;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -12,12 +13,12 @@ public class Lote {
     private int nroLote;
     private Persona responsable;
     private String codigoUbicacion;
-    private String fechaCreacion;
+    private Date fechaCreacion;
 
     private List<Producto> productos;
 
     
-    public Lote(String codigoUbicacion, String fechaCreacion) {
+    public Lote(String codigoUbicacion, Date fechaCreacion) {
         this.nroLote = sigLote;
         this.sigLote++;
         this.codigoUbicacion = codigoUbicacion;
@@ -54,11 +55,11 @@ public class Lote {
 		this.codigoUbicacion = codigoUbicacion;
 	}
 
-	public String getFechaCreacion() {
+	public Date getFechaCreacion() {
 		return fechaCreacion;
 	}
 
-	public void setFechaCreacion(String fechaCreacion) {
+	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}
 

@@ -74,6 +74,12 @@ public class VentanaProductoCongelado extends JFrame {
 		contentPane.setLayout(null);
 		
 		button = new JButton("Cancelar");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ventPrincipal.setVisible(true);
+				setVisible(false);
+			}
+		});
 		button.setFont(new Font("Sitka Small", Font.BOLD, 14));
 		button.setBounds(458, 376, 121, 38);
 		contentPane.add(button);

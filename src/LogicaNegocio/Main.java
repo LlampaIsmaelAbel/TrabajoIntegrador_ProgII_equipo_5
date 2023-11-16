@@ -21,8 +21,9 @@ public class Main {
 		ventanaPrincipal.setVentanaMostrarDatos(ventanaEtiqueta);
 		ventanaEtiqueta.setVentanaPrincipal(ventanaPrincipal);
 		ventanaPrincipal.setVentanaCongelado(ventanaCongelado);
+		ventanaCongelado.setVentanaPrincipal(ventanaPrincipal);
 		
 
 	}
-
+	
 }
