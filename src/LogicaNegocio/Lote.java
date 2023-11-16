@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import Vista.ProductoRefrigerado;
+import LogicaNegocio.Refrigerado;
 
 public class Lote {
 	private static int sigLote=1;
