@@ -7,6 +7,7 @@ import java.awt.Window;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -14,6 +15,7 @@ import javax.swing.JTextField;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.JRadioButton;
 
 public class VentanaProductoRefrigerado extends JFrame {
 	
@@ -35,6 +37,11 @@ public class VentanaProductoRefrigerado extends JFrame {
 	private JLabel lblFechaDeVencimiento;
 	private JLabel lblCostoDeTratamiento;
 	private JTextField txtDescripcionProd;
+	private JRadioButton rdbtnSi;
+	private JRadioButton rdbtnNo;
+	private JLabel lblRegistrarResponsable;
+
+	private ButtonGroup grupRadioBut;
 
 	
 
@@ -142,6 +149,25 @@ public class VentanaProductoRefrigerado extends JFrame {
 		txtDescripcionProd.setBounds(223, 67, 195, 20);
 		contentPane.add(txtDescripcionProd);
 		txtDescripcionProd.setColumns(10);
+		
+		rdbtnSi = new JRadioButton("Si");
+		rdbtnSi.setBounds(533, 91, 40, 23);
+		contentPane.add(rdbtnSi);
+		
+		rdbtnNo = new JRadioButton("No");
+		rdbtnNo.setSelected(true);
+		rdbtnNo.setBounds(585, 91, 45, 23);
+		contentPane.add(rdbtnNo);
+		
+		grupRadioBut=new ButtonGroup();
+		grupRadioBut.add(rdbtnSi);
+		grupRadioBut.add(rdbtnNo);
+		
+		
+		lblRegistrarResponsable = new JLabel("Registrar Responsable");
+		lblRegistrarResponsable.setFont(new Font("Sitka Small", Font.PLAIN, 12));
+		lblRegistrarResponsable.setBounds(490, 68, 150, 20);
+		contentPane.add(lblRegistrarResponsable);
 	}
 	
 	public void setVentanaPrincipal(Principal vent) {

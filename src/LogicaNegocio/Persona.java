@@ -5,6 +5,12 @@ public class Persona {
 	private int dni;
 	private String nombreResponsable;
 	
+	
+	
+	public Persona() {
+		super();
+	}
+
 	public Persona(int nroLegajo, int dni, String nombreResponsable) {
 		super();
 		this.nroLegajo = nroLegajo;
