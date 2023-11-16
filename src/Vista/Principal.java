@@ -52,7 +52,7 @@ public class Principal extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnNewRefrigerado.setBounds(134, 88, 182, 41);
+		btnNewRefrigerado.setBounds(134, 88, 219, 41);
 		contentPane.add(btnNewRefrigerado);
 		
 		btnMostrarDatos = new JButton("Mostrar Datos");
@@ -62,15 +62,15 @@ public class Principal extends JFrame {
 				setVisible(false);
 			}
 		});
-		btnMostrarDatos.setBounds(550, 96, 182, 41);
+		btnMostrarDatos.setBounds(531, 96, 201, 41);
 		contentPane.add(btnMostrarDatos);
 		
 		btnNewCongelado = new JButton("Agregar Producto Congelado");
-		btnNewCongelado.setBounds(134, 274, 182, 41);
+		btnNewCongelado.setBounds(134, 274, 219, 41);
 		contentPane.add(btnNewCongelado);
 		
 		btnNewButton_3 = new JButton("New button");
-		btnNewButton_3.setBounds(550, 274, 182, 41);
+		btnNewButton_3.setBounds(531, 274, 201, 41);
 		contentPane.add(btnNewButton_3);
 		
 		
