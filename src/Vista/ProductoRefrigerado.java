@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import com.toedter.calendar.JDateChooser;
+import javax.swing.JLabel;
 
 public class ProductoRefrigerado extends JFrame {
 	
@@ -19,15 +20,9 @@ public class ProductoRefrigerado extends JFrame {
 	private JPanel contentPane;
 	private JButton btnCancelar;
 	private JButton btnGuardar;
-	private JTextField txtCodigoDeOrganismo;
-	private JTextField txtFechaDeEnvasado;
-	private JTextField txtTemperaturaDeMantenimiento;
-	private JTextField txtGranjaDeOrigen;
 	private JTextField textCodigo;
 	private JTextField textTemperatura;
 	private JTextField textGranjaOrigen;
-	private JTextField txtFechaDeVencimiento;
-	private JTextField txtCostoDeTratamiento;
 	private JTextField textField;
 
 	
@@ -60,30 +55,6 @@ public class ProductoRefrigerado extends JFrame {
 		btnGuardar.setBounds(63, 310, 89, 23);
 		contentPane.add(btnGuardar);
 		
-		txtCodigoDeOrganismo = new JTextField();
-		txtCodigoDeOrganismo.setText("Codigo de organismo de supervision alimentaria:");
-		txtCodigoDeOrganismo.setBounds(32, 33, 242, 23);
-		contentPane.add(txtCodigoDeOrganismo);
-		txtCodigoDeOrganismo.setColumns(10);
-		
-		txtFechaDeEnvasado = new JTextField();
-		txtFechaDeEnvasado.setText("Fecha de envasado:");
-		txtFechaDeEnvasado.setBounds(417, 33, 106, 23);
-		contentPane.add(txtFechaDeEnvasado);
-		txtFechaDeEnvasado.setColumns(10);
-		
-		txtTemperaturaDeMantenimiento = new JTextField();
-		txtTemperaturaDeMantenimiento.setText("Temperatura de mantenimiento recomendada:");
-		txtTemperaturaDeMantenimiento.setBounds(32, 127, 230, 23);
-		contentPane.add(txtTemperaturaDeMantenimiento);
-		txtTemperaturaDeMantenimiento.setColumns(10);
-		
-		txtGranjaDeOrigen = new JTextField();
-		txtGranjaDeOrigen.setText("Granja de origen:");
-		txtGranjaDeOrigen.setBounds(417, 127, 94, 23);
-		contentPane.add(txtGranjaDeOrigen);
-		txtGranjaDeOrigen.setColumns(10);
-		
 		textCodigo = new JTextField();
 		textCodigo.setBounds(99, 67, 86, 20);
 		contentPane.add(textCodigo);
@@ -103,26 +74,38 @@ public class ProductoRefrigerado extends JFrame {
 		dateChooser.setBounds(417, 67, 95, 20);
 		contentPane.add(dateChooser);
 		
-		txtFechaDeVencimiento = new JTextField();
-		txtFechaDeVencimiento.setText("Fecha de vencimiento:");
-		txtFechaDeVencimiento.setBounds(30, 212, 122, 23);
-		contentPane.add(txtFechaDeVencimiento);
-		txtFechaDeVencimiento.setColumns(10);
-		
 		JDateChooser dateChooser_1 = new JDateChooser();
-		dateChooser_1.setBounds(30, 246, 95, 20);
+		dateChooser_1.setBounds(43, 244, 95, 20);
 		contentPane.add(dateChooser_1);
-		
-		txtCostoDeTratamiento = new JTextField();
-		txtCostoDeTratamiento.setText("Costo de Tratamiento:");
-		txtCostoDeTratamiento.setBounds(417, 213, 116, 20);
-		contentPane.add(txtCostoDeTratamiento);
-		txtCostoDeTratamiento.setColumns(10);
 		
 		textField = new JTextField();
 		textField.setBounds(417, 244, 86, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
+		
+		JLabel lblCodigoDeOrganismo = new JLabel("Codigo de organismo de supervision alimentaria:");
+		lblCodigoDeOrganismo.setBounds(43, 37, 237, 23);
+		contentPane.add(lblCodigoDeOrganismo);
+		
+		JLabel lblFechaDeEnvasado = new JLabel("Fecha de envasado:");
+		lblFechaDeEnvasado.setBounds(417, 37, 106, 23);
+		contentPane.add(lblFechaDeEnvasado);
+		
+		JLabel lblTemperaturaDeMantenimiento = new JLabel("Temperatura de mantenimiento recomendada:");
+		lblTemperaturaDeMantenimiento.setBounds(43, 131, 231, 23);
+		contentPane.add(lblTemperaturaDeMantenimiento);
+		
+		JLabel lblGranjaDeOrigen = new JLabel("Granja de origen:");
+		lblGranjaDeOrigen.setBounds(417, 131, 86, 23);
+		contentPane.add(lblGranjaDeOrigen);
+		
+		JLabel lblFechaDeVencimiento = new JLabel("Fecha de vencimiento:");
+		lblFechaDeVencimiento.setBounds(43, 215, 109, 17);
+		contentPane.add(lblFechaDeVencimiento);
+		
+		JLabel lblCostoDeTratamiento = new JLabel("Costo de tratamiento:");
+		lblCostoDeTratamiento.setBounds(417, 214, 106, 18);
+		contentPane.add(lblCostoDeTratamiento);
 	}
 	
 	public void setVentanaPrincipal(Principal vent) {
