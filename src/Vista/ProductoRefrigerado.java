@@ -128,7 +128,7 @@ public class ProductoRefrigerado extends JFrame {
 		lblCostoDeTratamiento.setBounds(312, 266, 140, 18);
 		contentPane.add(lblCostoDeTratamiento);
 		
-		JLabel lblNuevoProductoCong = new JLabel("Nuevos Datos de Producto Congelado");
+		JLabel lblNuevoProductoCong = new JLabel("Nuevos Datos de Producto Refrigerado");
 		lblNuevoProductoCong.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblNuevoProductoCong.setBounds(182, 11, 286, 31);
 		contentPane.add(lblNuevoProductoCong);
