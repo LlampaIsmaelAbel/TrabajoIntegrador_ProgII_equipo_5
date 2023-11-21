@@ -17,7 +17,7 @@ public class Stock implements Serializable{
 	public ArrayList<Lote> getNuevoLote() {
 		return nuevoLote;
 	}
-
+	
 	public void setNuevoLote(ArrayList<Lote> nuevoLote) {
 		this.nuevoLote = nuevoLote;
 	}
@@ -28,29 +28,17 @@ public class Stock implements Serializable{
 	}
 	
 	
-	public double calcularCostoTotalLote(Lote lote) {
-        double costoTotal = 0.0;
-
-        if (nuevoLote.contains(lote)) {
-            ArrayList<Producto> productosEnLote = (ArrayList<Producto>) lote.getProductos();
-
-            for (Producto producto : productosEnLote) {
-                costoTotal += producto.getCostoTratamiento();
-            }
-        } else {
-            System.out.println("El lote no se encuentra en el stock.");
-        }
-
-        return costoTotal;
-    }
+	
 	
 	public double calcularCostoTotalStock () {
 		double costoTotalStock = 0.0;
 		
 		for (Lote lote : nuevoLote) {
-			 costoTotalStock += calcularCostoTotalLote(lote);
+			 //costoTotalStock += calcularCostoTotalLote(lote);
         }
 
         return costoTotalStock;
     }
+	
+	
 }

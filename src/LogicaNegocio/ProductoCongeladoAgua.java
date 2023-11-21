@@ -8,9 +8,9 @@ public class ProductoCongeladoAgua extends ProductoCongelado {
 	
 	public ProductoCongeladoAgua(String descripcion, Date fechaVencimiento, double costoTratamiento,
 			String granjaOrigen, Date fechaEnvasado, String codigoSupervision, double temperaturaRecomendada,
-			double porcentajeGanancia, double salinidadAgua) {
+			double salinidadAgua) {
 		super(descripcion, fechaVencimiento, costoTratamiento, granjaOrigen, fechaEnvasado,
-				codigoSupervision, temperaturaRecomendada, porcentajeGanancia);
+				codigoSupervision, temperaturaRecomendada);
 		this.salinidadAgua = salinidadAgua;
 	}
 

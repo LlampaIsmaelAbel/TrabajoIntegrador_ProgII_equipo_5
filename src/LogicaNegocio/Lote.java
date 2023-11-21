@@ -18,9 +18,10 @@ public class Lote {
     private List<Producto> productos;
 
     
-    public Lote(String codigoUbicacion, Date fechaCreacion) {
+    public Lote(Persona responsable, String codigoUbicacion, Date fechaCreacion) {
         this.nroLote = sigLote;
         this.sigLote++;
+        this.responsable = responsable;
         this.codigoUbicacion = codigoUbicacion;
         this.fechaCreacion = fechaCreacion;
 
@@ -69,7 +70,13 @@ public class Lote {
 
 	public void setProductos(List<Producto> productos) {
 		this.productos = productos;
-	}
+	}//
+	public double calcularCostoTotalLote(Lote lote) {
+        double costoTotal = 0.0;
+        costoTotal=sumaMargenCongelado()+sumaMargenRefrigerado();
+        return costoTotal;
+    }
+	
 	//Metodos de margen de ganancia por cada Lote
 	public double sumaMargenCongelado() {
 		double sumaLote = 0;
@@ -118,9 +125,6 @@ public class Lote {
 		}
 	}
 	//Metodo Verificar y eliminar productos vencidos en un lote.
-	public void eliminarProductosVencidos() {
-		Date fechaActual = new Date();
-	}
 	public void verificarYEliminarProductosVencidos() {
 		productos = new ArrayList<Producto>();
         Date fechaActual = new Date();

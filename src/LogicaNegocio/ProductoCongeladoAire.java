@@ -12,10 +12,10 @@ public class ProductoCongeladoAire extends ProductoCongelado{
 
 	public ProductoCongeladoAire(String descripcion, Date fechaVencimiento, double costoTratamiento,
 			String granjaOrigen, Date fechaEnvasado, String codigoSupervision, double temperaturaRecomendada,
-			double porcentajeGanancia, double porcentajeNitrogeno, double porcentajeOxigeno,
+			double porcentajeNitrogeno, double porcentajeOxigeno,
 			double porcentajeDioxidoCarbono, double porcentajeVaporAgua) {
 		super(descripcion, fechaVencimiento, costoTratamiento, granjaOrigen, fechaEnvasado,
-				codigoSupervision, temperaturaRecomendada, porcentajeGanancia);
+				codigoSupervision, temperaturaRecomendada);
 		this.porcentajeNitrogeno = porcentajeNitrogeno;
 		this.porcentajeOxigeno = porcentajeOxigeno;
 		this.porcentajeDioxidoCarbono = porcentajeDioxidoCarbono;

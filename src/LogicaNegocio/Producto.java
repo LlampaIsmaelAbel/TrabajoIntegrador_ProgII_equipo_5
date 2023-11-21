@@ -72,9 +72,4 @@ public class Producto {
 				+ fechaVencimiento + ", costoTratamiento=" + costoTratamiento + ", granjaOrigen=" + granjaOrigen + "]";
 	}
 
-   
-    
-    
-    
-
 }

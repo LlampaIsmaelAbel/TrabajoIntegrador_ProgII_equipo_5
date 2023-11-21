@@ -11,12 +11,11 @@ public class ProductoCongelado extends Producto{
     private double porcentajeGanancia;
     
 	public ProductoCongelado(String descripcion, Date fechaVencimiento, double costoTratamiento, String granjaOrigen,
-			Date fechaEnvasado, String codigoSupervision, double temperaturaRecomendada, double porcentajeGanancia) {
+			Date fechaEnvasado, String codigoSupervision, double temperaturaRecomendada) {
 		super(descripcion, fechaVencimiento, costoTratamiento, granjaOrigen);
 		this.fechaEnvasado = fechaEnvasado;
 		this.codigoSupervision = codigoSupervision;
 		this.temperaturaRecomendada = temperaturaRecomendada;
-		this.porcentajeGanancia = porcentajeGanancia;
 	}
 
 

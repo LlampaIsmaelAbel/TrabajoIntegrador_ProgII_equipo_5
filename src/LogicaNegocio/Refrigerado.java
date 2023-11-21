@@ -11,13 +11,11 @@ public class Refrigerado extends Producto{
 
     
     public Refrigerado(String descripcion, Date fechaVencimiento, double costoTratamiento, String granjaOrigen,
-			String codigoOrganismoSupervision, Date fechaEnvasado, double temperaturaMantenimiento,
-			double margenGanancia) {
+			String codigoOrganismoSupervision, Date fechaEnvasado, double temperaturaMantenimiento) {
 		super(descripcion, fechaVencimiento, costoTratamiento, granjaOrigen);
 		this.codigoOrganismoSupervision = codigoOrganismoSupervision;
 		this.fechaEnvasado = fechaEnvasado;
 		this.temperaturaMantenimiento = temperaturaMantenimiento;
-		this.margenGanancia = margenGanancia;
 	}
 
 
