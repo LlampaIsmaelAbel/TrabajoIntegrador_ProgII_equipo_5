@@ -131,7 +131,7 @@ public class Principal {
 					List<Producto> prod = lote.getProductos();
 					for (Producto product : prod) {
 						if (product.getCodProducto() == num) {
-
+							
 						}
 					}
 				}
@@ -147,8 +147,11 @@ public class Principal {
 				lote1.eliminar(codigo);
 				List<Producto> refri1 = lote1.getProductos();
 				for (Producto finoli : refri1) {
-					System.out.println("No hay nada");
-					System.out.println(finoli);
+					if (refri1.size()<=0) {
+						System.out.println("NO ELEMENTOS");
+					}else {
+						System.out.println(finoli);
+					}
 				}
 				break;
 			case 4:
