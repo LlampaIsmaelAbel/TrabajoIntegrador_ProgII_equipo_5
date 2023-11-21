@@ -10,13 +10,13 @@ public class Principal {
 	public static Date fechaActual = new Date();
 	public static Lote lote1;
 	public static Lote lote2;
-	
+
 	public static Stock stock;
 	public static List<Producto> ListaProductos = new ArrayList<Producto>();
 	public static ArrayList<Lote> lotes = new ArrayList<Lote>();
 
 	public static void main(String[] args) {
-		Persona hol  = new Persona(1, 432524, "pedro");
+		Persona hol = new Persona(1, 432524, "pedro");
 		Producto pro = new ProductoCongelado("pollo", fechaActual, 1000, "pipa", fechaActual, "13", -10);
 		Producto pro1 = new ProductoCongelado("paty", fechaActual, 1030, "pipa", fechaActual, "14", -10);
 		Producto pro2 = new ProductoCongelado("loco", fechaActual, 1020, "pipa", fechaActual, "15", -10);
@@ -27,47 +27,46 @@ public class Principal {
 		ListaProductos.add(pro2);
 		ListaProductos.add(pro3);
 		ListaProductos.add(pro4);
-		
+
 		lote1 = new Lote(hol, "A1", fechaActual);
 		lote1.setProductos(ListaProductos);
 		lotes.add(lote1);
-		
-		Persona hola  = new Persona(2, 432524, "juanito");
+
+		Persona hola = new Persona(2, 432524, "juanito");
 		Producto proo = new ProductoCongelado("pollo", fechaActual, 10, "pipa", fechaActual, "13", -10);
 		Producto proo1 = new ProductoCongelado("paty", fechaActual, 10, "pipa", fechaActual, "14", -10);
 		Producto proo2 = new ProductoCongelado("loco", fechaActual, 10, "pipa", fechaActual, "15", -10);
-		Producto proo3 = new ProductoCongelado("helado", fechaActual,12, "pipa", fechaActual, "16", -10);
+		Producto proo3 = new ProductoCongelado("helado", fechaActual, 12, "pipa", fechaActual, "16", -10);
 		Producto proo4 = new ProductoCongelado("paty", fechaActual, 10, "pipa", fechaActual, "17", -10);
 		ListaProductos.add(proo);
 		ListaProductos.add(proo1);
 		ListaProductos.add(proo2);
 		ListaProductos.add(proo3);
 		ListaProductos.add(proo4);
-		
+
 		lote2 = new Lote(hola, "A2", fechaActual);
 		lote2.setProductos(ListaProductos);
 		lotes.add(lote2);
-		
+
 		stock = new Stock(lotes);
 		for (Lote stg : lotes) {
 			System.out.println(stg);
 		}
-		//lotes.add(lote1);
-		//lote1.setProductos(productos);
-		
-		/*Persona hol1  = new Persona(1, 432525, "juana");
-		lote1 = new Lote(hol1, "A2", fechaActual);
-		
-		lotes.add(lote1);
-		lote1.setProductos(productos);
-		Persona hol2  = new Persona(1, 432526, "messi");
-		lote1 = new Lote(hol2, "A3", fechaActual);
-		lotes.add(lote1);
-		lote1.setProductos(productos);*/
-		
+		// lotes.add(lote1);
+		// lote1.setProductos(productos);
+
+		/*
+		 * Persona hol1 = new Persona(1, 432525, "juana"); lote1 = new Lote(hol1, "A2",
+		 * fechaActual);
+		 * 
+		 * lotes.add(lote1); lote1.setProductos(productos); Persona hol2 = new
+		 * Persona(1, 432526, "messi"); lote1 = new Lote(hol2, "A3", fechaActual);
+		 * lotes.add(lote1); lote1.setProductos(productos);
+		 */
+
 		int opcion;
 		do {
-			opcion=menu();
+			opcion = menu();
 			int nroLote;
 			switch (opcion) {
 			case 1:
@@ -108,8 +107,8 @@ public class Principal {
 							System.out.println("Error en el ingreso!!!");
 							break;
 						}
-						
-					}else {
+
+					} else {
 						System.out.println("Error de Ingreso");
 					}
 
@@ -122,21 +121,21 @@ public class Principal {
 				lote1.setProductos(ListaProductos);
 				lotes.add(lote1);
 //				stock=new Stock(lotes);
-				
+
 				break;
 			case 2:
 				System.out.println("Ingrese el Codigo del producto");
-				int num=Integer.parseInt(sc.nextLine());
-				ArrayList<Lote> listaLote=stock.getNuevoLote();
+				int num = Integer.parseInt(sc.nextLine());
+				ArrayList<Lote> listaLote = stock.getNuevoLote();
 				for (Lote lote : listaLote) {
-					List<Producto> prod=lote.getProductos();
-						for (Producto pro : prod) {
-							if (pro.getCodProducto()==num) {
-								
-							}
+					List<Producto> prod = lote.getProductos();
+					for (Producto product : prod) {
+						if (product.getCodProducto() == num) {
+
 						}
 					}
 				}
+
 				break;
 			case 3:
 				List<Producto> refri = lote1.getProductos();
@@ -160,7 +159,7 @@ public class Principal {
 				System.out.print("Ingrese Nro Lote: ");
 				nroLote = sc.nextInt();
 				double costoTotalLoteDeterminado = stock.calcularCostoTotalLote(nroLote);
-				System.out.println("El costo total de un lote determinado es: "+ costoTotalLoteDeterminado);
+				System.out.println("El costo total de un lote determinado es: " + costoTotalLoteDeterminado);
 				break;
 			case 6:
 				System.out.println("Ingrese Nro Lote: ");
@@ -168,7 +167,7 @@ public class Principal {
 				stock.calcularMargenGananciaLote(nroLote);
 				break;
 			case 7:
-				    
+
 				break;
 			case 8:
 				break;
@@ -198,13 +197,14 @@ public class Principal {
 		String granjaOrigen = sc.nextLine();
 		System.out.print("Ingrese Codigo de organismo supervicion(numerico): ");
 		String codigoOrganimo = sc.nextLine();
-		//falta poner la fecha de envasado
+		// falta poner la fecha de envasado
 		System.out.print("Ingrese temperatura de mantenimiento recomendada: ");
 		double temperaturaMantenimiento = sc.nextDouble();
 		Refrigerado refri1 = new Refrigerado(descripcion, fechaActual, costoTratamiento, granjaOrigen, codigoOrganimo,
 				fechaActual, temperaturaMantenimiento);
 		return refri1;
 	}
+
 	public static ProductoCongeladoAire CreacionProductoCongeladoAire() {
 		System.out.print("Ingrese Descripcion: ");
 		String descripcion = sc.nextLine();
@@ -225,10 +225,13 @@ public class Principal {
 		double dioxidoCarbono = sc.nextDouble();
 		System.out.print("Ingrese % de nitrogeno: ");
 		double vaporAgua = sc.nextDouble();
-		ProductoCongeladoAire congeladoAire1 = new ProductoCongeladoAire(descripcion, fechaActual, costoTratamiento, granjaOrigen, fechaActual, codigoOrganimo, temperaturaMantenimiento, nitrogeno, oxigeno, dioxidoCarbono, vaporAgua);
+		ProductoCongeladoAire congeladoAire1 = new ProductoCongeladoAire(descripcion, fechaActual, costoTratamiento,
+				granjaOrigen, fechaActual, codigoOrganimo, temperaturaMantenimiento, nitrogeno, oxigeno, dioxidoCarbono,
+				vaporAgua);
 		return congeladoAire1;
-	
+
 	}
+
 	public static ProductoCongeladoAgua CreacionProductoCongeladoAgua() {
 		System.out.print("Ingrese Descripcion: ");
 		String descripcion = sc.nextLine();
@@ -243,10 +246,12 @@ public class Principal {
 		double temperaturaMantenimiento = sc.nextDouble();
 		System.out.print("Ingrese salinidad del agua(gramo*litro): ");
 		double salinidadAgua = sc.nextDouble();
-		ProductoCongeladoAgua congeladoAgua1 = new ProductoCongeladoAgua(descripcion, fechaActual, costoTratamiento, granjaOrigen, fechaActual, codigoOrganimo, temperaturaMantenimiento, salinidadAgua);
+		ProductoCongeladoAgua congeladoAgua1 = new ProductoCongeladoAgua(descripcion, fechaActual, costoTratamiento,
+				granjaOrigen, fechaActual, codigoOrganimo, temperaturaMantenimiento, salinidadAgua);
 		return congeladoAgua1;
-	
+
 	}
+
 	public static ProductoCongeladoNitrogeno CreacionProductoCongeladoNitrogeno() {
 		System.out.print("Ingrese Descripcion: ");
 		String descripcion = sc.nextLine();
@@ -263,12 +268,14 @@ public class Principal {
 		String metodoCongelacion = sc.nextLine();
 		System.out.print("Ingrese tiempo de exposicion al nitrogeno ");
 		int tiempoExposicion = sc.nextInt();
-		ProductoCongeladoNitrogeno congeladoNitrogeno1 = new ProductoCongeladoNitrogeno(descripcion, fechaActual, costoTratamiento, granjaOrigen, fechaActual, codigoOrganimo, temperaturaMantenimiento, metodoCongelacion, tiempoExposicion);
+		ProductoCongeladoNitrogeno congeladoNitrogeno1 = new ProductoCongeladoNitrogeno(descripcion, fechaActual,
+				costoTratamiento, granjaOrigen, fechaActual, codigoOrganimo, temperaturaMantenimiento,
+				metodoCongelacion, tiempoExposicion);
 		return congeladoNitrogeno1;
 	}
-	
+
 	public static int menu() {
-		int opc=0;
+		int opc = 0;
 		do {
 			System.out.println("----------Menu de opciones----------");
 			System.out.println("1. Grabar un Nuevo Producto");
@@ -284,17 +291,17 @@ public class Principal {
 			System.out.println("11. Salir");
 			System.out.print("Seleccione una opcion: ");
 			opc = sc.nextInt();
-			
-			if (opc>11 || opc<1) {
+
+			if (opc > 11 || opc < 1) {
 				System.out.println("Ingrese una opcion del Menu");
-				
+
 			}
-			
-		} while (opc>11 || opc<1);
-		
+
+		} while (opc > 11 || opc < 1);
+
 		return opc;
 	}
-	
+
 	public static Persona registrarPersona() {
 		System.out.print("Ingrese Nro Legajo: ");
 		int nroLegajo = sc.nextInt();
