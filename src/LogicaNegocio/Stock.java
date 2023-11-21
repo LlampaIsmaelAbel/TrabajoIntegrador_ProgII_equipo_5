@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import LogicaNegocios.Lote;
-import LogicaNegocios.Producto;
+import LogicaNegocio.Lote;
+import LogicaNegocio.Producto;
 
 import java.util.Collection;
 

@@ -12,7 +12,7 @@ public class Principal {
 	public static Lote lote2;
 	
 	public static Stock stock;
-	public static List<Producto> productos = new ArrayList<Producto>();
+	public static List<Producto> ListaProductos = new ArrayList<Producto>();
 	public static ArrayList<Lote> lotes = new ArrayList<Lote>();
 
 	public static void main(String[] args) {
@@ -22,14 +22,14 @@ public class Principal {
 		Producto pro2 = new ProductoCongelado("loco", fechaActual, 1020, "pipa", fechaActual, "15", -10);
 		Producto pro3 = new ProductoCongelado("helado", fechaActual, 1200, "pipa", fechaActual, "16", -10);
 		Producto pro4 = new ProductoCongelado("paty", fechaActual, 1000, "pipa", fechaActual, "17", -10);
-		productos.add(pro);
-		productos.add(pro1);
-		productos.add(pro2);
-		productos.add(pro3);
-		productos.add(pro4);
+		ListaProductos.add(pro);
+		ListaProductos.add(pro1);
+		ListaProductos.add(pro2);
+		ListaProductos.add(pro3);
+		ListaProductos.add(pro4);
 		
 		lote1 = new Lote(hol, "A1", fechaActual);
-		lote1.setProductos(productos);
+		lote1.setProductos(ListaProductos);
 		lotes.add(lote1);
 		
 		Persona hola  = new Persona(2, 432524, "juanito");
@@ -38,14 +38,14 @@ public class Principal {
 		Producto proo2 = new ProductoCongelado("loco", fechaActual, 10, "pipa", fechaActual, "15", -10);
 		Producto proo3 = new ProductoCongelado("helado", fechaActual,12, "pipa", fechaActual, "16", -10);
 		Producto proo4 = new ProductoCongelado("paty", fechaActual, 10, "pipa", fechaActual, "17", -10);
-		productos.add(proo);
-		productos.add(proo1);
-		productos.add(proo2);
-		productos.add(proo3);
-		productos.add(proo4);
+		ListaProductos.add(proo);
+		ListaProductos.add(proo1);
+		ListaProductos.add(proo2);
+		ListaProductos.add(proo3);
+		ListaProductos.add(proo4);
 		
 		lote2 = new Lote(hola, "A2", fechaActual);
-		lote2.setProductos(productos);
+		lote2.setProductos(ListaProductos);
 		lotes.add(lote2);
 		
 		stock = new Stock(lotes);
@@ -67,81 +67,76 @@ public class Principal {
 		
 		int opcion;
 		do {
-			System.out.println("----------Menu de opciones----------");
-			System.out.println("1. Grabar un Nuevo Producto");
-			System.out.println("2. Modificar los datos de un Producto determinado");
-			System.out.println("3. Eliminar un Producto determinado");
-			System.out.println("4. Costo Total en Stock");
-			System.out.println("5. Costo Total de un lote determinado");
-			System.out.println("6. Margen de Ganancia total por cada lote");
-			System.out.println("7. Cantidad de productos en cada lote");
-			System.out.println("8. Cantidad de productos de un determinado tipo en cada lote");
-			System.out.println("9. Verificar y eliminar productos vencidos en un lote");
-			System.out.println("10. Mostrar la etiqueta del producto");
-			System.out.println("11. Salir");
-			System.out.print("Seleccione una opcion: ");
-			opcion = sc.nextInt();
+			opcion=menu();
 			int nroLote;
 			switch (opcion) {
 			case 1:
-				System.out.print("Ingrese Nro Legajo: ");
-				int nroLegajo = sc.nextInt();
-				System.out.print("Ingrese DNI: ");
-				int dni = sc.nextInt();
-				sc.nextLine();
-				System.out.print("Ingrese nombre Responsable: ");
-				String nombreResponsable = sc.nextLine();
-				System.out.print("Ingrese codigo de ubicacion: ");
-				String codigoUbi = sc.nextLine();
-				Persona persona1 = new Persona(nroLegajo, dni, codigoUbi);
-				lote1 = new Lote(persona1, codigoUbi, fechaActual);
-				System.out.println("1)Producto Resfrigerado\n2)Producto Congelado");
-				System.out.print("Selecione una opcion: ");
-				int opcion1 = sc.nextInt();
-				sc.nextLine();
-				if (opcion1 == 1) {
-					Refrigerado refrigerado = CreacionProductoRefrigerado();
-					productos.add(refrigerado);
-					lote1.setProductos(productos);
-					//System.out.println(lote1.getProductos());
-					List<Producto> refri = lote1.getProductos();
-					//for (Producto refri : hol) {
-					//	Refrigerado r = (Refrigerado ) refri;
-					//	System.out.println(r);
-					//}
-				} else if (opcion1 == 2) {
-					System.out.println("1)Producto Congelado Aire\n2)Producto Congelado Agua\n3)Producto Congelado Nitrogeno");
-					System.out.println("Seleccione una opcion: ");
-					int opcion2 = sc.nextInt();
+				Persona nuevoPers = registrarPersona();
+
+				String siNO = "s";
+
+				while (siNO.equalsIgnoreCase("s")) {
+
+					System.out.println("1)Producto Resfrigerado\n2)Producto Congelado");
+					System.out.print("Selecione una opcion: ");
+					int opcion1 = sc.nextInt();
 					sc.nextLine();
-					switch (opcion2) {
-					case 1:
-						ProductoCongeladoAire congeladoAire = CreacionProductoCongeladoAire();
-						productos.add(congeladoAire);
-						lote1.setProductos(productos);
-						List<Producto> aire = lote1.getProductos();
-						break;
-					case 2:
-						ProductoCongeladoAgua congeladoAgua = CreacionProductoCongeladoAgua();
-						productos.add(congeladoAgua);
-						lote1.setProductos(productos);
-						List<Producto> agua = lote1.getProductos();
-						break;
-					case 3:
-						CreacionProductoCongeladoNitrogeno();
-						ProductoCongeladoNitrogeno congeladoNitrogeno = CreacionProductoCongeladoNitrogeno();
-						productos.add(congeladoNitrogeno);
-						lote1.setProductos(productos);
-						List<Producto> nitrogeno = lote1.getProductos();
-						break;
-					default:
-						System.out.println("Error en el ingreso!!!");
-						break;
+					if (opcion1 == 1) {
+						Refrigerado refrigerado = CreacionProductoRefrigerado();// creando un producto refri
+						ListaProductos.add(refrigerado);
+					} else if (opcion1 == 2) {
+						System.out.println(
+								"1)Producto Congelado Aire\n2)Producto Congelado Agua\n3)Producto Congelado Nitrogeno");
+						System.out.println("Seleccione una opcion: ");
+						int opcion2 = sc.nextInt();
+						sc.nextLine();
+						switch (opcion2) {
+						case 1:
+							ProductoCongeladoAire congeladoAire = CreacionProductoCongeladoAire();
+							ListaProductos.add(congeladoAire);
+							break;
+						case 2:
+							ProductoCongeladoAgua congeladoAgua = CreacionProductoCongeladoAgua();
+							ListaProductos.add(congeladoAgua);
+							break;
+						case 3:
+							CreacionProductoCongeladoNitrogeno();
+							ProductoCongeladoNitrogeno congeladoNitrogeno = CreacionProductoCongeladoNitrogeno();
+							ListaProductos.add(congeladoNitrogeno);
+							break;
+						default:
+							System.out.println("Error en el ingreso!!!");
+							break;
+						}
+						
+					}else {
+						System.out.println("Error de Ingreso");
 					}
+
+					System.out.print("Ingrese codigo de ubicacion: ");
+					String codigoUbi = sc.nextLine();
+					lote1 = new Lote(nuevoPers, codigoUbi, fechaActual);
+					System.out.println("¿Continuar ingresado libros? s/n");
+					siNO = sc.nextLine();
 				}
+				lote1.setProductos(ListaProductos);
+				lotes.add(lote1);
+//				stock=new Stock(lotes);
+				
 				break;
 			case 2:
-				
+				System.out.println("Ingrese el Codigo del producto");
+				int num=Integer.parseInt(sc.nextLine());
+				ArrayList<Lote> listaLote=stock.getNuevoLote();
+				for (Lote lote : listaLote) {
+					List<Producto> prod=lote.getProductos();
+						for (Producto pro : prod) {
+							if (pro.getCodProducto()==num) {
+								
+							}
+						}
+					}
+				}
 				break;
 			case 3:
 				List<Producto> refri = lote1.getProductos();
@@ -271,5 +266,44 @@ public class Principal {
 		ProductoCongeladoNitrogeno congeladoNitrogeno1 = new ProductoCongeladoNitrogeno(descripcion, fechaActual, costoTratamiento, granjaOrigen, fechaActual, codigoOrganimo, temperaturaMantenimiento, metodoCongelacion, tiempoExposicion);
 		return congeladoNitrogeno1;
 	}
-
+	
+	public static int menu() {
+		int opc=0;
+		do {
+			System.out.println("----------Menu de opciones----------");
+			System.out.println("1. Grabar un Nuevo Producto");
+			System.out.println("2. Modificar los datos de un Producto determinado");
+			System.out.println("3. Eliminar un Producto determinado");
+			System.out.println("4. Costo Total en Stock");
+			System.out.println("5. Costo Total de un lote determinado");
+			System.out.println("6. Margen de Ganancia total por cada lote");
+			System.out.println("7. Cantidad de productos en cada lote");
+			System.out.println("8. Cantidad de productos de un determinado tipo en cada lote");
+			System.out.println("9. Verificar y eliminar productos vencidos en un lote");
+			System.out.println("10. Mostrar la etiqueta del producto");
+			System.out.println("11. Salir");
+			System.out.print("Seleccione una opcion: ");
+			opc = sc.nextInt();
+			
+			if (opc>11 || opc<1) {
+				System.out.println("Ingrese una opcion del Menu");
+				
+			}
+			
+		} while (opc>11 || opc<1);
+		
+		return opc;
+	}
+	
+	public static Persona registrarPersona() {
+		System.out.print("Ingrese Nro Legajo: ");
+		int nroLegajo = sc.nextInt();
+		System.out.print("Ingrese DNI: ");
+		int dni = sc.nextInt();
+		sc.nextLine();
+		System.out.print("Ingrese nombre Responsable: ");
+		String nombreResponsable = sc.nextLine();
+		Persona persona1 = new Persona(nroLegajo, dni, nombreResponsable);
+		return persona1;
+	}
 }
